@@ -29,6 +29,8 @@ import BoostListing from "./pages/BoostListing";
 import DashboardSettings from "./pages/DashboardSettings";
 import DashboardFavorites from "./pages/DashboardFavorites";
 import DashboardNotifications from "./pages/DashboardNotifications";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -59,6 +61,8 @@ const App = () => (
             {/* Auth routes (no layout) */}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
 
             {/* Dashboard routes (protected) */}
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
